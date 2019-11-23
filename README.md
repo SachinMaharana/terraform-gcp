@@ -1,3 +1,1 @@
-#
-
-Terraform GCP VM instances
+# Terraform GCP VM instances
