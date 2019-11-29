@@ -60,4 +60,4 @@ resource "google_compute_instance" "k8s-worker" {
   tags = ["worker"]
 }
 
-kubeadm init --pod-network-cidr 10.200.0.0/16 
+#kubeadm init --pod-network-cidr 10.200.0.0/16 
