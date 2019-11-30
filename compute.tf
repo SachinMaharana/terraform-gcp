@@ -2,7 +2,7 @@ resource "google_compute_instance" "k8s-master" {
   boot_disk {
     auto_delete = true
     initialize_params {
-      image = var.master_image
+      image = var.master_image_centos
       size  = var.size
     }
   }
@@ -21,11 +21,11 @@ resource "google_compute_instance" "k8s-master" {
     scopes = ["compute-rw", "userinfo-email", "compute-ro", "storage-ro", "service-management", "service-control", "logging-write", "monitoring"]
   }
 
-  metadata =  {
+  metadata = {
     creator = var.user
   }
 
-  tags = ["worker"]
+  tags = ["master"]
 
 }
 
@@ -33,7 +33,7 @@ resource "google_compute_instance" "k8s-worker" {
   boot_disk {
     auto_delete = true
     initialize_params {
-      image = var.master_image
+      image = var.master_image_centos
       size  = var.size
     }
   }

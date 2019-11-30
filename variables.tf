@@ -13,6 +13,12 @@ variable "zone" {
 variable "master_image" {
   default = "ubuntu-os-cloud/ubuntu-1804-lts"
 }
+variable "master_image_ubuntu" {
+  default = "ubuntu-os-cloud/ubuntu-1804-lts"
+}
+variable "master_image_centos" {
+  default = "centos-cloud/centos-7"
+}
 
 variable "size" {
   default = 100
