@@ -1,5 +1,5 @@
 variable "project" {
-  default = "dogs23"
+  default = "pans-91"
 }
 
 variable "region" {
